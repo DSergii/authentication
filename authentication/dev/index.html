@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="SocialAuth">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>index | SocialAuth</title>
+	<link rel="stylesheet" href="css/all.css" media="all" />
+	<script type="text/javascript" src="libs/angular/angular.js"></script>
+	<script type="text/javascript" src="libs/angular/angular-animate.js"></script>
+	<script type="text/javascript" src="libs/angular/angular-loader.js"></script>
+	<script type="text/javascript" src="libs/angular/angular-resource.js"></script>
+	<script type="text/javascript" src="libs/angular/angularfire.js"></script>
+	<script type="text/javascript" src="libs/angular/firebase.js"></script>
+	<script src="app/app.js"></script>
+</head>
+<body>
+	<!-- wrapper  start -->
+	<div id="wrapper">
+		<div class="w1">
+			<div id="main">
+				<div id="content">
+					<div class="wrap" ng-controller="authCtrl as ac">
+						<div class="hold-btn">
+							<a href="#" class="btn facebook" ng-click="ac.facebookLogin()">Facebook</a>
+							<a href="#" class="btn google" ng-click="ac.googleLogin()">Google</a>
+							
+						</div>
+						<div class="hold-user">
+							<strong class="name">{{ac.fbUser.facebook.displayName}}{{ac.fbUser.google.displayName}}</strong>
+							<figure class="hold-img">
+								<img src="{{ac.fbUser.facebook.profileImageURL}}" alt="" />
+								<img src="{{ac.fbUser.google.profileImageURL}}" alt="" />
+							</figure>
+						</div>
+					</div>
+					<div class="hold-login" ng-controller="loginCtrl as lc">
+						<div class="hold-name">
+							<strong class="name">{{lc.curUser.password.email}}</strong>
+							<strong class="email">
+								<img src="{{lc.curUser.password.profileImageURL}}" alt="image" />
+							</strong>
+						</div>
+						<form name="loginForm" ng-submit="lc.login()">
+							<input type="email" ng-model="lc.credentials.email" placeholder="Email"/>
+							<input type="password" ng-model="lc.credentials.password" placeholder="Password"/>
+							<button type="submit">Login</button>
+							<button type="button" ng-click="lc.logout()">LogOut</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

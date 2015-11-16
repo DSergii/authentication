@@ -1,0 +1,98 @@
+body {
+	margin:0;
+	font: 14px/16px Arial,Helvetica,sans-serif;
+	min-width:960px;
+	color:#000;
+}
+.wrap{
+	width:500px;
+	float:left;
+	overflow:hidden;
+	padding:100px 0;
+}
+.hold-btn{
+	overflow:hidden;
+	width:100%;
+	margin-bottom:40px;
+}
+a.btn{
+	text-decoration:none;
+	padding:12px 20px;
+	-webkit-border-radius: 8px;	-moz-border-radius: 8px;	border-radius: 8px;
+	font-weight: bold;
+	-webkit-transition: background 0.3s ease-in-out;
+	-moz-transition: background 0.3s ease-in-out;
+	-ms-transition: background 0.3s ease-in-out;
+	-o-transition: background 0.3s ease-in-out;
+	transition: background 0.3s ease-in-out;
+}
+a.btn.facebook{
+	float:left;
+	background:#3333CC;
+	color:#fff;
+}
+a.btn.google{
+	float:right;
+	background:#FF0033;
+	color:#fff;
+}
+a.btn.facebook:hover{background:#0099CC;}
+a.btn.google:hover{background:#990000;}
+
+.hold-user{
+	overflow:hidden;
+	width:100%;
+}
+.name{
+	float:left;
+}
+.hold-img{
+	margin:0;
+	float:right;
+	width:60px;
+	height:60px;
+	-webkit-border-radius: 50%;	-moz-border-radius: 50%;	border-radius: 50%;
+	border: 2px solid #FFE4C4;
+	overflow:hidden;
+}
+.hold-img img{
+	display:block;
+	width:100%;
+	height:auto;
+}
+#content{
+	overflow:hidden;
+	width:900px;
+	margin:0 auto;
+}
+.hold-login{
+	float:left;
+	width:300px;
+	padding:100px 50px;
+}
+input{
+	width:90%;
+	margin:0 0 10px;
+	padding:5px 10px;
+}
+.hold-name{
+	float:left;
+	margin-top:-50px;
+	overflow:hidden;
+	width:100%;
+}
+.hold-name .name{
+	float:left;
+}
+.hold-name .email{
+	float:right;
+	width:60px;
+	height:60px;
+	-webkit-border-radius: 50%;	-moz-border-radius: 50%;	border-radius: 50%;
+	overflow:hidden;
+}
+.hold-name img{
+	display:block;
+	width:100%;
+	height:auto;
+}
